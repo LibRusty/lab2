@@ -19,5 +19,4 @@ public:
     }
 };
 
-
 #endif // LANGUAGE_JAVA_H

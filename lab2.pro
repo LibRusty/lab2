@@ -14,6 +14,7 @@ SOURCES += \
         methodunit_cplus.cpp \
         methodunit_java.cpp \
         methodunit_sharp.cpp \
+        programm.cpp \
         unit.cpp
 
 # Default rules for deployment.
@@ -35,4 +36,5 @@ HEADERS += \
     methodunit_java.h \
     methodunit_sharp.h \
     printoperatorunit.h \
+    programm.h \
     unit.h
