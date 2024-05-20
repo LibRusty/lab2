@@ -1,0 +1,4 @@
+#ifndef METHODUNIT_SHARP_H
+#define METHODUNIT_SHARP_H
+
+#endif // METHODUNIT_SHARP_H
