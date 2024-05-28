@@ -4,6 +4,7 @@
 #include "ilanguage.h"
 #include "classunit_sharp.h"
 #include "methodunit_sharp.h"
+#include "printoperatorunit_sharp.h"
 
 class Language_Sharp: public ILanguage
 {
@@ -15,7 +16,7 @@ public:
         return new MethodUnit_Sharp();
     }
     PrintOperatorUnit* print_operator_unit(){
-        return new PrintOperatorUnit();
+        return new PrintOperatorUnit_Sharp();
     }
 };
 

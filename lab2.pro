@@ -36,5 +36,8 @@ HEADERS += \
     methodunit_java.h \
     methodunit_sharp.h \
     printoperatorunit.h \
+    printoperatorunit_cplus.h \
+    printoperatorunit_java.h \
+    printoperatorunit_sharp.h \
     programm.h \
     unit.h

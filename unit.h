@@ -1,6 +1,7 @@
 #ifndef UNIT_H
 #define UNIT_H
 #include <iostream>
+#include <memory>
 #include <vector>
 
 class Unit

@@ -4,6 +4,7 @@
 #include "ilanguage.h"
 #include "classunit_java.h"
 #include "methodunit_java.h"
+#include "printoperatorunit_java.h"
 
 class Language_Java: public ILanguage
 {
@@ -15,7 +16,7 @@ public:
         return new MethodUnit_Java();
     }
     PrintOperatorUnit* print_operator_unit(){
-        return new PrintOperatorUnit();
+        return new PrintOperatorUnit_Java();
     }
 };
 

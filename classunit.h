@@ -22,11 +22,11 @@ public:
     virtual void add(const std::shared_ptr<Unit>& unit, Flags flags);
     virtual std::string compile(unsigned int level) const;
 
-private:
+protected:
     std::string m_name;
     using Fields = std::vector<std::shared_ptr<Unit>>;
     std::vector<Fields> m_fields;
 };
-const std::vector<std::string> ClassUnit::ACCESS_MODIFIERS = { };
+
 
 #endif // CLASSUNIT_H

@@ -4,6 +4,7 @@
 #include "ilanguage.h"
 #include "classunit_cplus.h"
 #include "methodunit_cplus.h"
+#include "printoperatorunit_cplus.h"
 
 class Language_CPlus: public ILanguage
 {
@@ -15,7 +16,7 @@ public:
         return new MethodUnit_CPlus();
     }
     PrintOperatorUnit* print_operator_unit(){
-        return new PrintOperatorUnit();
+        return new PrintOperatorUnit_CPlus();
     }
 };
 

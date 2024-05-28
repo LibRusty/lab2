@@ -16,10 +16,10 @@ public:
         m_name(name), m_returnType(returnType), m_flags(flags) { }
     virtual void add(const std::shared_ptr<Unit>& unit, Flags);
     virtual std::string compile(unsigned int level = 0) const;
-private:
+protected:
     std::string m_name;
     std::string m_returnType;
     Flags m_flags;
-    std::vector< std::shared_ptr<Unit>> m_body;
+    std::vector<std::shared_ptr<Unit>> m_body;
 
 #endif // METHODUNIT_H
