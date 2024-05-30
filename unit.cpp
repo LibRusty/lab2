@@ -1,11 +1,11 @@
 #include "unit.h"
 
-virtual void Unit::add(const std::shared_ptr<Unit>& , Flags)
+void Unit::add(const std::shared_ptr<Unit>& , Flags)
 {
     throw std::runtime_error("Not supported");
 }
 
-virtual std::string Unit::generateShift(unsigned int level) const
+std::string Unit::generateShift(unsigned int level) const
 {
     static const auto DEFAULT_SHIFT = " ";
     std::string result;

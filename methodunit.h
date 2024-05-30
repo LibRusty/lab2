@@ -11,15 +11,12 @@ public:
         FINAL = 1 << 3,
         ABSTRACT = 1 << 4
     };
-public:
-    MethodUnit(const std::string& name, const std::string& returnType, Flags flags) :
-        m_name(name), m_returnType(returnType), m_flags(flags) { }
-    virtual void add(const std::shared_ptr<Unit>& unit, Flags);
-    virtual std::string compile(unsigned int level = 0) const;
+
+    MethodUnit(const std::string& name, const std::string& returnType, Flags flags);
 protected:
     std::string m_name;
     std::string m_returnType;
     Flags m_flags;
     std::vector<std::shared_ptr<Unit>> m_body;
-
+};
 #endif // METHODUNIT_H

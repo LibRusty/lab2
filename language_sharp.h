@@ -9,15 +9,12 @@
 class Language_Sharp: public ILanguage
 {
 public:
-    ClassUnit* class_unit() {
-        return new ClassUnit_Sharp();
-    }
-    MethodUnit* method_unit() {
-        return new MethodUnit_Sharp();
-    }
-    PrintOperatorUnit* print_operator_unit(){
-        return new PrintOperatorUnit_Sharp();
-    }
+    Language_Sharp() = default;
+    virtual ~Language_Sharp() = default;
+
+    std::shared_ptr<ClassUnit> get_class_unit(const std::string& name) override;
+    std::shared_ptr<MethodUnit> get_method_unit(const std::string& name, const std::string& returnType, Flags flags) override;
+    std::shared_ptr<PrintOperatorUnit> get_print_operator_unit(const std::string& text) override;
 };
 
 #endif // LANGUAGE_SHARP_H

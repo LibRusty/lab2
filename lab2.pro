@@ -7,14 +7,18 @@ CONFIG += c++17 cmdline
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+        classunit.cpp \
         classunit_cplus.cpp \
         classunit_java.cpp \
         classunit_sharp.cpp \
+        language_cplus.cpp \
+        language_java.cpp \
+        language_sharp.cpp \
         main.cpp \
+        methodunit.cpp \
         methodunit_cplus.cpp \
         methodunit_java.cpp \
         methodunit_sharp.cpp \
-        programm.cpp \
         unit.cpp
 
 # Default rules for deployment.
@@ -39,5 +43,4 @@ HEADERS += \
     printoperatorunit_cplus.h \
     printoperatorunit_java.h \
     printoperatorunit_sharp.h \
-    programm.h \
     unit.h

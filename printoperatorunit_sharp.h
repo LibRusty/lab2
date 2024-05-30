@@ -7,7 +7,7 @@ class PrintOperatorUnit_Sharp : public PrintOperatorUnit
 {
 public:
     explicit PrintOperatorUnit_Sharp(const std::string& text): PrintOperatorUnit(text) { }
-    virtual std::string compile( unsigned int level = 0 ) const {
+    std::string compile( unsigned int level = 0 ) const override {
         return generateShift(level) + "Console.WriteLine( \"" + m_text + "\" );\n";
     }
 private:

@@ -5,11 +5,11 @@
 
 class ClassUnit_Sharp: public ClassUnit
 {
-    explicit ClassUnit_Sharp(const std::string& name): ClassUnit(name){}
-    std::vector<std::string> ACCESS_MODIFIERS = { "public", "protected", "private", "private proteted", "file", "internal", "protected internal" };
+public:
+    explicit ClassUnit_Sharp(const std::string& name);
 
-    virtual void add(const std::shared_ptr<Unit>& unit, Flags flags) override;
-    virtual std::string compile(unsigned int level) const override;
+    void add(const std::shared_ptr<Unit>& unit, Flags flags) override;
+    std::string compile(unsigned int level) const override;
 };
 
 

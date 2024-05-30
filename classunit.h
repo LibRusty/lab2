@@ -16,11 +16,7 @@ public:
     };
     static const std::vector<std::string> ACCESS_MODIFIERS;
 public:
-    explicit ClassUnit(const std::string& name) : m_name(name) {
-        m_fields.resize(ACCESS_MODIFIERS.size());
-    }
-    virtual void add(const std::shared_ptr<Unit>& unit, Flags flags);
-    virtual std::string compile(unsigned int level) const;
+    explicit ClassUnit(const std::string& name);
 
 protected:
     std::string m_name;

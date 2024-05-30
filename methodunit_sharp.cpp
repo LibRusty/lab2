@@ -1,11 +1,14 @@
 #include "methodunit_sharp.h"
 
-void MethodUnit_Sharp::add(const std::shared_ptr<Unit>& unit, Flags /* flags */ = 0)
+MethodUnit_Sharp::MethodUnit_Sharp(const std::string& name, const std::string& returnType, Flags flags):
+    MethodUnit(name, returnType, flags){}
+
+void MethodUnit_Sharp::add(const std::shared_ptr<Unit>& unit, Flags /* flags */)
 {
     m_body.push_back(unit);
 }
 
-std::string MethodUnit_Sharp::compile(unsigned int level = 0) const
+std::string MethodUnit_Sharp::compile(unsigned int level) const
 {
     std::string result = generateShift(level);
     if(m_flags & STATIC) {

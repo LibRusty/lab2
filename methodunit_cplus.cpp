@@ -1,11 +1,14 @@
 #include "methodunit_cplus.h"
 
-void MethodUnit_CPlus::add(const std::shared_ptr<Unit>& unit, Flags /* flags */ = 0)
+MethodUnit_CPlus::MethodUnit_CPlus(const std::string& name, const std::string& returnType, Flags flags):
+    MethodUnit(name, returnType, flags){}
+
+void MethodUnit_CPlus::add(const std::shared_ptr<Unit>& unit, Flags /* flags */)
 {
     m_body.push_back(unit);
 }
 
-std::string MethodUnit_CPlus::compile(unsigned int level = 0) const
+std::string MethodUnit_CPlus::compile(unsigned int level) const
 {
     std::string result = generateShift(level);
     if(m_flags & STATIC) {

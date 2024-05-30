@@ -7,7 +7,7 @@ class PrintOperatorUnit_Java : public PrintOperatorUnit
 {
 public:
     explicit PrintOperatorUnit_Java(const std::string& text): PrintOperatorUnit(text) { }
-    virtual std::string compile( unsigned int level = 0 ) const {
+    std::string compile( unsigned int level = 0 ) const override {
         return generateShift(level) + "System.out.println( \"" + m_text + "\" );\n";
     }
 private:

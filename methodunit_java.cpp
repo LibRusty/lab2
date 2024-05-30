@@ -1,11 +1,15 @@
 #include "methodunit_java.h"
 
-void MethodUnit_Java::add(const std::shared_ptr<Unit>& unit, Flags /* flags */ = 0)
+MethodUnit_Java::MethodUnit_Java(const std::string& name, const std::string& returnType, Flags flags):
+    MethodUnit(name, returnType, flags){}
+
+
+void MethodUnit_Java::add(const std::shared_ptr<Unit>& unit, Flags /* flags */)
 {
     m_body.push_back(unit);
 }
 
-std::string MethodUnit_Java::compile(unsigned int level = 0) const
+std::string MethodUnit_Java::compile(unsigned int level) const
 {
     std::string result = generateShift(level);
     if(m_flags & STATIC) {

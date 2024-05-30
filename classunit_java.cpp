@@ -1,5 +1,9 @@
 #include "classunit_java.h"
 
+static const std::vector<std::string> ACCESS_MODIFIERS = { "public", "protected", "private" };
+
+ClassUnit_Java::ClassUnit_Java(const std::string& name): ClassUnit(name){}
+
 void ClassUnit_Java::add(const std::shared_ptr<Unit> &unit, Flags flags)
 {
     int accessModifier = PRIVATE;
