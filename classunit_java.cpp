@@ -1,8 +1,11 @@
 #include "classunit_java.h"
 
-static const std::vector<std::string> ACCESS_MODIFIERS = { "public", "protected", "private" };
+const std::vector<std::string> ClassUnit_Java::ACCESS_MODIFIERS = { "public", "protected", "private" };
 
-ClassUnit_Java::ClassUnit_Java(const std::string& name): ClassUnit(name){}
+ClassUnit_Java::ClassUnit_Java(const std::string& name):  ClassUnit(name) {
+    m_fields.resize(ACCESS_MODIFIERS.size());
+}
+
 
 void ClassUnit_Java::add(const std::shared_ptr<Unit> &unit, Flags flags)
 {

@@ -1,8 +1,11 @@
 #include "classunit_cplus.h"
 
-static const std::vector<std::string> ACCESS_MODIFIERS = { "public", "protected", "private" };
+const std::vector<std::string> ClassUnit_CPlus::ACCESS_MODIFIERS = { "public", "protected", "private" };
 
-ClassUnit_CPlus::ClassUnit_CPlus(const std::string& name): ClassUnit(name){}
+ClassUnit_CPlus::ClassUnit_CPlus(const std::string& name):  ClassUnit(name) {
+    m_fields.resize(ACCESS_MODIFIERS.size());
+}
+
 
 void ClassUnit_CPlus::add(const std::shared_ptr<Unit> &unit, Flags flags)
 {

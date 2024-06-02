@@ -2,7 +2,8 @@
 #define METHODUNIT_H
 #include "unit.h"
 
-class MethodUnit : public Unit {
+class MethodUnit : public Unit
+{
 public:
     enum Modifier {
         STATIC = 1,

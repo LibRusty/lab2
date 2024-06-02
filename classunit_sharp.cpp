@@ -1,9 +1,12 @@
 #include "classunit_sharp.h"
 
-static const std::vector<std::string> ACCESS_MODIFIERS = { "public", "protected", "private", "private proteted",
+const std::vector<std::string> ClassUnit_Sharp::ACCESS_MODIFIERS = { "public", "protected", "private", "private proteted",
                                                           "file", "internal", "protected internal" };
 
-ClassUnit_Sharp::ClassUnit_Sharp(const std::string& name): ClassUnit(name){}
+ClassUnit_Sharp::ClassUnit_Sharp(const std::string& name): ClassUnit(name) {
+    m_fields.resize(ACCESS_MODIFIERS.size());
+}
+
 
 void ClassUnit_Sharp::add(const std::shared_ptr<Unit> &unit, Flags flags)
 {

@@ -27,5 +27,14 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
+    std::shared_ptr<ILanguage> lang1 = std::make_shared<Language_CPlus>();
+    std::cout << generateProgram(lang1) << std::endl << std::endl;
+
+    std::shared_ptr<ILanguage> lang2 = std::make_shared<Language_Java>();
+    std::cout << generateProgram(lang2) << std::endl << std::endl;
+
+    std::shared_ptr<ILanguage> lang3 = std::make_shared<Language_Sharp>();
+    std::cout << generateProgram(lang3) << std::endl << std::endl;
+
     return a.exec();
 }
