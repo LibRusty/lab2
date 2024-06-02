@@ -7,7 +7,7 @@ class PrintOperatorUnit : public Unit
 public:
     explicit PrintOperatorUnit(const std::string& text) : m_text(text) { }
 
-private:
+protected:
     std::string m_text;
 };
 

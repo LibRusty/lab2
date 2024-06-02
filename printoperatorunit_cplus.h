@@ -10,8 +10,6 @@ public:
     std::string compile(unsigned int level = 0) const override {
         return generateShift( level ) + "printf( \"" + m_text + "\" );\n";
     }
-private:
-    std::string m_text;
 };
 
 #endif // PRINTOPERATORUNIT_CPLUS_H
