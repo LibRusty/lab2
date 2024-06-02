@@ -15,6 +15,8 @@ void ClassUnit_Sharp::add(const std::shared_ptr<Unit> &unit, Flags flags)
     {
         accessModifier = flags;
     }
+    else
+        qWarning("Unacceptable modifier for class in C#");
     m_fields[accessModifier].push_back(unit);
 }
 

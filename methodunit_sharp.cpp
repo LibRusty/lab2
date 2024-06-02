@@ -16,6 +16,8 @@ std::string MethodUnit_Sharp::compile(unsigned int level) const
     } else if(m_flags & VIRTUAL) {
         result += "virtual ";
     }
+    else
+        qWarning("Unacceptable modifier for method in C#");
     result += m_returnType + " ";
     result += m_name + "()";
 

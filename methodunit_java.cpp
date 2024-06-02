@@ -21,6 +21,8 @@ std::string MethodUnit_Java::compile(unsigned int level) const
     {
         result += "abstract ";
     }
+    else
+        qWarning("Unacceptable modifier for method in Java");
     result += m_returnType + " ";
     result += m_name + "()";
     result += " {\n";

@@ -3,6 +3,8 @@
 #include <iostream>
 #include <memory>
 #include <vector>
+#include <QtDebug>
+#include <stdexcept>
 
 class Unit
 {

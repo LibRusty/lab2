@@ -17,6 +17,10 @@ std::string generateProgram(std::shared_ptr<ILanguage>& language) {
         language->get_method_unit("testFunc3", "void", MethodUnit::VIRTUAL | MethodUnit::CONST),
         ClassUnit::PUBLIC
         );
+    myClass->add(
+        language->get_method_unit("testFunc6", "void", MethodUnit::VIRTUAL | MethodUnit::CONST),
+        ClassUnit::FILE
+        );
     auto method = language->get_method_unit("testFunc4", "void", MethodUnit::STATIC);
     method->add(language->get_print_operator_unit(R"(Hello, world!\n)"));
     myClass->add(method, ClassUnit::PROTECTED);
